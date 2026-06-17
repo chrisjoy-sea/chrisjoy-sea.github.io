@@ -3,7 +3,7 @@
 :root {
   --bg: #fafaf8;
   --fg: #1a1a1a;
-  --accent: #2a6049;
+  --accent: #3a5080;
   --muted: #6b6b6b;
   --measure: 680px;
   --font-body: 'EB Garamond', Georgia, serif;
@@ -193,7 +193,7 @@ a:hover {
   font-family: var(--font-ui);
   font-size: 0.78rem;
   padding: 0.2rem 0.65rem;
-  border: 1px solid rgba(42, 96, 73, 0.35);
+  border: 1px solid rgba(58, 80, 128, 0.35);
   border-radius: 2px;
   color: var(--muted);
 }
@@ -378,7 +378,7 @@ footer {
   font-family: var(--font-ui);
   font-size: 0.75rem;
   color: var(--muted);
-  border-top: 1px solid rgba(42, 96, 73, 0.3);
+  border-top: 1px solid rgba(58, 80, 128, 0.3);
 }
 
 /* ── Responsive ── */
