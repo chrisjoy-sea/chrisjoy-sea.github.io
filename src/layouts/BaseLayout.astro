@@ -6,12 +6,8 @@ interface Props {
   description?: string;
 }
 
-const { title, description = 'Christopher J. Joy — Southeast Asia Researcher' } = Astro.props;
-
-// Normalize so baseUrl always ends with '/'
-const baseUrl = import.meta.env.BASE_URL.replace(/\/?$/, '/');
-const base = baseUrl.slice(0, -1); // strip trailing slash for pathname comparison
-const pathname = Astro.url.pathname.replace(base, '') || '/';
+const { title, description = 'Christopher J. Joy — Vietnam & Southeast Asia Country Research Analyst' } = Astro.props;
+const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
 ---
 
 <!doctype html>
@@ -27,11 +23,11 @@ const pathname = Astro.url.pathname.replace(base, '') || '/';
   </head>
   <body>
     <nav>
-      <a href={baseUrl} class="site-name">christopher j. joy</a>
+      <a href="/" class="site-name">christopher j. joy</a>
       <ul class="nav-links">
-        <li><a href={baseUrl} aria-current={pathname === '/' ? 'page' : undefined}>about</a></li>
-        <li><a href={`${baseUrl}research`} aria-current={pathname === '/research' ? 'page' : undefined}>research</a></li>
-        <li><a href={`${baseUrl}cv`} aria-current={pathname === '/cv' ? 'page' : undefined}>cv</a></li>
+        <li><a href="/" aria-current={pathname === '/' ? 'page' : undefined}>about</a></li>
+        <li><a href="/research" aria-current={pathname === '/research' ? 'page' : undefined}>research</a></li>
+        <li><a href="/cv" aria-current={pathname === '/cv' ? 'page' : undefined}>cv</a></li>
       </ul>
     </nav>
 
